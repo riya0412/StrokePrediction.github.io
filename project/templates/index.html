@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="{{url_for('static',filename='styles/style.css') }}">
+    <!-- <link rel="stylesheet" type="text/css" href="C:\Users\Dell\Desktop\icon\css\all.css"> -->
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous"> -->
+    <style>
+    </style>
+</head>
+<body > 
+    <div class="wrapper">
+     <!--Top Menu & Menu button-->
+     <div class="section">
+                        <h1>Good Morning, Delia!</h1> 
+
+                        <!--search bar-->
+                        <div class="hello">
+                        <input type="text" name="text" placeholder="Search..." size="60px">
+                        <li><i class="fa-solid fa-bell"></i></li>
+                        <li><i class="fa-sharp fa-solid fa-gear"></i></li>
+                        </div>
+
+                         </div>
+                         <!--pie graph image-->
+                         <div class="pie">
+                    <img src="/static/pie.jfif" alt="piegraph">         
+                         </div>
+                        <!--bar graph image-->
+                         <div class="bar">
+                    <img src="/static/bar.jfif" alt="bargrapg">         
+                         </div>
+
+                          <!--graph image-->
+                         <div class="p">
+                    <img src="/static/p.jfif" alt="pgrapg">         
+                         </div>
+                         <!--gif image-->
+                         <div class="gif">
+                    <img src="/static/exer.gif" alt="gif1">         
+                         </div>
+
+                         <!--exercise description-->
+                         <div class="exercise">
+                            <h2>Excersise !</h2>
+                            <br>
+                           <p>Those who exercise frequently have a lesser chance of getting a stroke</p>
+                         </div>
+
+                         <div class="vertical"></div>
+                        
+                        <!--first-aid gif -->
+                        <div class="first-aid">
+                           <img src="/static/plus.gif" alt="gif2">
+
+                           <!--description-->
+                           <div class="des">
+                            <h2>During a stroke, time</h2>
+                            <h2> is of the essence.</h2>
+                            <br>
+                           <h6>Call emergency services and get to the hospital immediately.</h6>
+                           <br>
+                           <h6>Check to see if they're breathing. If they're not breathing perform CPR</h6>
+                           <br>
+                           <h6>If they're having difficulty in breathing loosen any constrictive clothing, such as a tie or scraf</h6>
+                           <br>
+                           <h6>Don't give them anything to eat or drin </h6>
+                           <br>
+
+                        </div>
+                    </div>
+
+
+
+        <div class="sidebar">
+            <div class="profile">
+                <!--Profile Image-->
+                <img src="https://1.bp.blogspot.com/-vhmWFWO2r8U/YLjr2A57toI/AAAAAAAACO4/0GBonlEZPmAiQW4uvkCTm5LvlJVd_-l_wCNcBGAsYHQ/s16000/team-1-2.jpg" alt="profile_picture">
+                <!--Profile Title & Descruption-->
+                <h3>Anamika Roy</h3>
+                <p>Designer</p>
+                <p class="text-danger"><b>{{prediction_text}}</b></p>
+            </div>
+             <!--Menu item-->
+
+             <form action="/home" method="POST">
+                <div class="mb-3">
+                    <label for="exampleInputPassword1"  class="form-label">Gender</label>
+                    <select class="form-select" id="gender" name="gender" aria-label="Default select example">
+                        <option selected>-- select gender --</option>
+                        <option value="Male">Male</option>
+                        <option value="Female">Female</option>
+                        <option value="Other">Other</option>
+                    </select>
+                </div>
+                <div class="mb-3">
+                    <label for="exampleInputEmail1" class="form-label">Enter age</label>
+                    <input type="text" class="form-control" id="age" name="age" placeholder="Age">
+                </div>
+                <div class="mb-3">
+                    <label for="exampleInputPassword1"  class="form-label">Hypertension</label>
+                    <select class="form-select" id="hypertension" name="hypertension" aria-label="Default select example">
+                        <option selected>-- select Hypertension --</option>
+                        <option value="1">Yes</option>
+                        <option value="0">No</option>
+                    </select>
+                </div>
+                <div class="mb-3">
+                    <label for="exampleInputPassword1"  class="form-label">Heart Disease</label>
+                    <select class="form-select" id="disease" name="disease" aria-label="Default select example">
+                        <option selected>-- select Heart Disease --</option>
+                        <option value="1">Yes</option>
+                        <option value="0">No</option>
+                    </select>
+                </div>
+                <div class="mb-3">
+                    <label for="exampleInputPassword1"  class="form-label">Marrital status</label>
+                    <select class="form-select" id="married" name="married" aria-label="Default select example">
+                        <option selected>--select marrital status --</option>
+                        <option value="Yes">Yes</option>
+                        <option value="No">No</option>
+                    </select>
+                </div>
+                <div class="mb-3">
+                    <label for="exampleInputPassword1"  class="form-label">work type</label>
+                    <select class="form-select" id="work" name="work" aria-label="Default select example">
+                        <option selected>-- select work type --</option>
+                        <option value="Self-employed">Self-employed</option>
+                        <option value="Private">Private</option>
+                        <option value="children">children</option>
+                        <option value="Govt_job">Government Job</option>
+                        <option value="Never_worked">Never_worked</option>
+                    </select>
+                </div>
+                <div class="mb-3">
+                    <label for="exampleInputPassword1"  class="form-label">Residence Type</label>
+                    <select class="form-select" id="residence" name="residence" aria-label="Default select example">
+                        <option selected>-- Select residence type --</option>
+                        <option value="Urban">Urban</option>
+                        <option value="Rural">Rural</option>
+                    </select>
+                </div>
+                <div class="mb-3">
+                    <label for="exampleInputEmail1" class="form-label">Enter average glucose level</label>
+                    <input type="text" class="form-control" id="glucose" name="glucose" placeholder="Average Glucose level">
+                </div>
+                <div class="mb-3">
+                    <label for="exampleInputEmail1" class="form-label">Enter Body Mass Index (BMI)</label>
+                    <input type="text" class="form-control" id="bmi" name="bmi" placeholder="Body Mass Index (BMI)">
+                </div>               
+                <div class="mb-3">
+                    <label for="exampleInputPassword1"  class="form-label">Smoking status</label>
+                    <select class="form-select" id="smoking" name="smoking" aria-label="Default select example">
+                        <option selected value="Unknown">-- Select smoking status if unknown --</option>
+                        <option value="never smoked">never smoked</option>
+                        <option value="formerly smoked">formerly smoked</option>
+                        <option value="smokes">smokes</option>
+                    </select>
+                </div>
+                <div class="text-center"><button type="submit" class="btn btn-primary">Submit</button></div>
+            </form>
+    
+       </div>
+        
+    </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+  integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
+  crossorigin="anonymous">  
+  </script>
+</body>
+</html>
+
